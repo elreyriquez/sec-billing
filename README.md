@@ -4,6 +4,8 @@ Static **pricing & features** site for [SEC Billing](https://github.com/elreyriq
 
 **Live (after GitHub Pages is enabled):** `https://elreyriquez.github.io/sec-billing/`
 
+**Unlisted Solo invite (share manually):** `https://elreyriquez.github.io/sec-billing/solo.html` — `noindex`, not linked from public `index.html`.
+
 ## Setup
 
 1. Create the GitHub repo **`sec-billing`** (or use this folder as the repo root) and push.

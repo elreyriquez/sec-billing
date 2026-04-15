@@ -387,3 +387,24 @@
 .billing-config-warn code {
   font-size: 0.78em;
 }
+
+/* Unlisted Solo invite page (solo.html) */
+.billing-solo-page {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.solo-invite-banner {
+  background: linear-gradient(120deg, rgba(196, 149, 46, 0.18), rgba(196, 149, 46, 0.06));
+  border: 1px solid rgba(196, 149, 46, 0.4);
+  border-radius: var(--radius-panel);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.solo-invite-banner strong {
+  color: var(--text);
+}
