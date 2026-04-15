@@ -67,6 +67,7 @@ h3 {
   padding: 0.6rem 1.25rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   min-height: 4rem;
 }
@@ -98,32 +99,12 @@ h3 {
   text-transform: uppercase;
 }
 
-.sec-billing-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  gap: 0.5rem 1.25rem;
-  flex-wrap: wrap;
-}
-
-.sec-billing-nav a {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.75) !important;
-  text-decoration: none !important;
-  white-space: nowrap;
-}
-
-.sec-billing-nav a:hover {
-  color: #fff !important;
-}
-
 .sec-billing-header__cta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Header CTAs: same geometry as plan buttons */
@@ -219,7 +200,6 @@ h3 {
     display: inline-flex;
   }
 
-  .sec-billing-nav,
   .sec-billing-header__cta {
     display: none;
     width: 100%;
@@ -227,17 +207,14 @@ h3 {
     align-items: stretch;
     justify-content: flex-start;
     padding-top: 0.75rem;
-  }
-
-  .sec-billing-header__cta {
     padding-bottom: 0.5rem;
+    margin-left: 0;
   }
 
   .sec-billing-header__cta .sec-billing-btn {
     width: 100%;
   }
 
-  .sec-billing-header.is-open .sec-billing-nav,
   .sec-billing-header.is-open .sec-billing-header__cta {
     display: flex;
   }

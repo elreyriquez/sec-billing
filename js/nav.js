@@ -8,7 +8,7 @@
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  header.querySelectorAll(".sec-billing-nav a, .sec-billing-header__cta a").forEach(function (link) {
+  header.querySelectorAll(".sec-billing-header__cta a").forEach(function (link) {
     link.addEventListener("click", function () {
       if (window.matchMedia("(max-width: 820px)").matches) {
         header.classList.remove("is-open");
