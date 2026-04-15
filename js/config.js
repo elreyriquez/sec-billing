@@ -8,8 +8,7 @@ window.SEC_CONFIG = {
   /**
    * SEC Billing (Next.js app). Public site root URL, no trailing slash.
    * Sign up / Sign in on this site use this base.
-   * Local: http://127.0.0.1:3000 with billing-invoice-system running.
-   * Production: https://your-app.up.railway.app
+   * Local dev: use http://127.0.0.1:3000 while the Next app runs locally.
    */
-  BILLING_APP_BASE: "http://127.0.0.1:3000",
+  BILLING_APP_BASE: "https://billing-invoice-system-production-c173.up.railway.app",
 };
