@@ -89,6 +89,8 @@ h3 {
   height: 48px;
   width: auto;
   display: block;
+  /* Source mark is dark-on-light; invert for dark header bar */
+  filter: invert(1);
 }
 
 .sec-billing-brand__title {
