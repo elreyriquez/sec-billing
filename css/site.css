@@ -1,0 +1,267 @@
+/* SEC Billing marketing site — standalone shell (no sec-services quotation chrome) */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap");
+
+:root {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --surface-muted: #f0ebe3;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+  --accent: #c4952e;
+  --accent-hover: #a67d24;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.14);
+  --radius: 8px;
+  --radius-panel: 10px;
+  --font-ui: "DM Sans", system-ui, sans-serif;
+  --font-head: "Oswald", system-ui, sans-serif;
+  --header-bg: #0d0d0d;
+  --pricing-studio-blue: #1a3f6c;
+  --pricing-studio-blue-hover: #153556;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* ─── Standalone header (product site, not quotation cart) ─── */
+.sec-billing-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sec-billing-header__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.sec-billing-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none !important;
+  color: #fff !important;
+  flex-shrink: 0;
+}
+
+.sec-billing-brand:hover {
+  opacity: 0.92;
+}
+
+.sec-billing-brand img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.sec-billing-brand__title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sec-billing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0.5rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.sec-billing-nav a {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.sec-billing-nav a:hover {
+  color: #fff !important;
+}
+
+.sec-billing-header__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Header CTAs: same geometry as plan buttons */
+.sec-billing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.sec-billing-btn--ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.sec-billing-btn--ghost:hover:not(.billing-cta-disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff !important;
+}
+
+.sec-billing-btn--primary {
+  background: var(--accent);
+  color: #1a1a1a !important;
+  border-color: var(--accent);
+}
+
+.sec-billing-btn--primary:hover:not(.billing-cta-disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #1a1a1a !important;
+}
+
+.billing-cta-disabled {
+  opacity: 0.45 !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.sec-billing-menu-toggle {
+  display: none;
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sec-billing-menu-toggle span {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+}
+
+.sec-billing-menu-toggle span::before,
+.sec-billing-menu-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+}
+
+.sec-billing-menu-toggle span::before {
+  top: -6px;
+}
+
+.sec-billing-menu-toggle span::after {
+  top: 6px;
+}
+
+@media (max-width: 820px) {
+  .sec-billing-menu-toggle {
+    display: inline-flex;
+  }
+
+  .sec-billing-nav,
+  .sec-billing-header__cta {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 0.75rem;
+  }
+
+  .sec-billing-header__cta {
+    padding-bottom: 0.5rem;
+  }
+
+  .sec-billing-header__cta .sec-billing-btn {
+    width: 100%;
+  }
+
+  .sec-billing-header.is-open .sec-billing-nav,
+  .sec-billing-header.is-open .sec-billing-header__cta {
+    display: flex;
+  }
+
+  .sec-billing-header__inner {
+    flex-wrap: wrap;
+  }
+}
+
+/* Light sections: section titles */
+.billing-section:not(.billing-section--dark) .billing-section-title {
+  color: var(--text);
+}
+
+/* Site footer */
+.sec-billing-site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.5rem 1.25rem 2rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.sec-billing-site-footer a {
+  color: var(--accent-hover);
+}

@@ -1,6 +1,6 @@
 # SEC Billing — marketing site
 
-Static **pricing & features** page for [SEC Billing](https://github.com/elreyriquez/billing-invoice-system), hosted separately from the freelance [SEC services / quotation](https://github.com/elreyriquez/sec-services) site.
+Static **pricing & features** site for [SEC Billing](https://github.com/elreyriquez/billing-invoice-system): its own layout (`css/site.css`), not the quotation-site header. Related links to [SEC services](https://elreyriquez.github.io/sec-services/) are optional footer/nav only.
 
 **Live (after GitHub Pages is enabled):** `https://elreyriquez.github.io/sec-billing/`
 

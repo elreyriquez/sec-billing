@@ -5,44 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEC Billing — Pricing &amp; features</title>
   <meta name="description" content="Plans, limits, and capabilities for SEC Billing: invoicing, collections, time tracking, reports, and client portal for agencies and firms." />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/billing-pricing.css" />
 </head>
 <body>
-  <!-- SEC services catalogue lives on a separate site; nav links go there. -->
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="index.html" class="logo-mark" aria-label="SEC Billing — Home">
-        <img class="logo-mark__img" src="assets/logo/SECLogo.png" alt="" decoding="async" />
+  <header class="sec-billing-header" id="sec-billing-header">
+    <div class="sec-billing-header__inner">
+      <a href="index.html" class="sec-billing-brand" aria-label="SEC Billing — Home">
+        <img src="assets/logo/SECLogo.png" alt="" decoding="async" width="120" height="48" />
+        <span class="sec-billing-brand__title">Billing</span>
       </a>
-      <nav class="nav-main" id="site-main-nav" aria-label="Main">
-        <a href="https://elreyriquez.github.io/sec-services/production.html">Graphic, Motion &amp; Video</a>
-        <a href="https://elreyriquez.github.io/sec-services/web-services.html">Web Services</a>
-        <a href="https://elreyriquez.github.io/sec-services/retainers.html">Retainers &amp; bundles</a>
-        <a href="https://elreyriquez.github.io/sec-services/software.html">Software</a>
-        <a href="https://elreyriquez.github.io/sec-services/marketing.html">Marketing &amp; Promotion</a>
-        <a href="https://elreyriquez.github.io/sec-services/strategy.html">Strategy consultations</a>
+
+      <nav class="sec-billing-nav" id="sec-billing-nav" aria-label="Related">
+        <a href="https://elreyriquez.github.io/sec-services/" target="_blank" rel="noopener noreferrer">SEC services</a>
+        <a href="https://elreyriquez.github.io/sec-services/software.html" target="_blank" rel="noopener noreferrer">Other SEC software</a>
       </nav>
-      <div class="site-header__actions">
-        <div class="currency-toggle no-print" role="group" aria-label="Quote currency">
-          <button type="button" class="currency-toggle__btn" data-currency="jmd">JMD</button>
-          <button type="button" class="currency-toggle__btn" data-currency="usd">USD</button>
-        </div>
-        <a href="https://elreyriquez.github.io/sec-services/cart.html" class="cart-link">Cart <span id="cart-badge" hidden></span></a>
+
+      <div class="sec-billing-header__cta">
+        <a class="sec-billing-btn sec-billing-btn--ghost" data-billing-path="/login" href="#">Sign in</a>
+        <a class="sec-billing-btn sec-billing-btn--primary" data-billing-path="/register" href="#">Get started</a>
       </div>
+
       <button
         type="button"
-        class="nav-toggle no-print"
-        id="nav-toggle"
+        class="sec-billing-menu-toggle"
         aria-expanded="false"
-        aria-controls="site-main-nav"
+        aria-controls="sec-billing-nav"
         aria-label="Open menu"
       >
-        <span class="nav-toggle__icon" aria-hidden="true">
-          <span class="nav-toggle__bar"></span>
-          <span class="nav-toggle__bar"></span>
-          <span class="nav-toggle__bar"></span>
-        </span>
+        <span></span>
       </button>
     </div>
   </header>
@@ -50,9 +41,7 @@
   <main>
     <div class="billing-pricing-hero">
       <div class="billing-pricing-inner">
-        <p class="billing-pricing-breadcrumb">
-          <a href="https://elreyriquez.github.io/sec-services/software.html">Software</a> · SEC Billing
-        </p>
+        <p class="billing-pricing-breadcrumb">SEC Billing</p>
         <p class="billing-pricing-kicker">Plans for teams</p>
         <h1>Pricing &amp; product features</h1>
         <p class="billing-pricing-lead">
@@ -94,7 +83,7 @@
                 <li>Audit log retention <strong>12 months</strong></li>
               </ul>
               <div class="billing-cta-row">
-                <a class="btn btn-pricing-studio billing-cta-wide" data-billing-path="/register" href="#">Sign up — Studio</a>
+                <a class="billing-plan-cta billing-cta-wide" data-billing-path="/register" href="#">Sign up — Studio</a>
               </div>
             </div>
           </div>
@@ -122,7 +111,7 @@
                 <li>Audit log retention <strong>24 months</strong></li>
               </ul>
               <div class="billing-cta-row">
-                <a class="btn btn-primary billing-cta-wide" data-billing-path="/register" href="#">Sign up — Agency</a>
+                <a class="billing-plan-cta billing-cta-wide" data-billing-path="/register" href="#">Sign up — Agency</a>
               </div>
             </div>
           </div>
@@ -199,12 +188,17 @@
           <p>Sign up for a trial workspace or sign in if your team already uses SEC Billing.</p>
         </div>
         <div class="billing-footer-cta__buttons">
-          <a class="btn btn-pricing-studio" data-billing-path="/register" href="#" style="width: auto">Sign up</a>
-          <a class="btn btn-primary" data-billing-path="/login" href="#" style="width: auto">Sign in</a>
+          <a class="billing-plan-cta billing-plan-cta--accent" data-billing-path="/register" href="#">Sign up</a>
+          <a class="billing-plan-cta billing-plan-cta--ghost" data-billing-path="/login" href="#">Sign in</a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="sec-billing-site-footer">
+    SEC Billing is a product by Shaquille Comrie — SEC.
+    Freelance services &amp; quotes: <a href="https://elreyriquez.github.io/sec-services/" target="_blank" rel="noopener noreferrer">SEC services</a>.
+  </footer>
 
   <script src="js/config.js"></script>
   <script>
@@ -229,8 +223,6 @@
       });
     });
   </script>
-  <script src="js/currency.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>
