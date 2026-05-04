@@ -4,9 +4,9 @@ Static **pricing & features** site for [SEC Billing](https://github.com/elreyriq
 
 **Live (after GitHub Pages is enabled):** `https://elreyriquez.github.io/sec-billing/`
 
-**Custom domain (recommended):** `https://pricing.secfreelance.com/` — Namecheap **Advanced DNS**: **CNAME** Host **`pricing`** → **`elreyriquez.github.io`** (Host is only `pricing`, not the full domain). GitHub repo → **Settings → Pages → Custom domain:** `pricing.secfreelance.com`. Wait for DNS + **Enforce HTTPS**.
+**Custom domain (recommended):** `https://billingdetails.secfreelance.com/` — Namecheap **Advanced DNS**: **CNAME** Host **`billingdetails`** → **`elreyriquez.github.io`**. GitHub repo → **Settings → Pages → Custom domain:** `billingdetails.secfreelance.com`. Wait for DNS + **Enforce HTTPS**.
 
-*(Use another subdomain like `plans` only if `pricing` conflicts; update the **`CNAME`** file in this repo to match.)*
+*(The hostname must match the single line in the **`CNAME`** file in this repo.)*
 
 **Unlisted Solo invite (share manually):** `https://elreyriquez.github.io/sec-billing/solo.html` — `noindex`, not linked from public `index.html`.
 
