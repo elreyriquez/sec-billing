@@ -10,5 +10,5 @@ window.SEC_CONFIG = {
    * Sign up / Sign in on this site use this base.
    * Local dev: use http://127.0.0.1:3000 while the Next app runs locally.
    */
-  BILLING_APP_BASE: "https://billing-invoice-system-production-c173.up.railway.app",
+  BILLING_APP_BASE: "https://billing.secfreelance.com",
 };
