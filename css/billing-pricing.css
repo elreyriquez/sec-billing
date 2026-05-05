@@ -50,6 +50,29 @@
   color: var(--text-muted);
 }
 
+.billing-pricing-trial {
+  margin: 1.25rem 0 0;
+  max-width: 40rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.billing-pricing-trial strong {
+  color: var(--text);
+}
+
+.billing-plan-trial-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
 .billing-section {
   padding: 2.5rem 1.5rem;
 }
