@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEC Billing — Pricing &amp; features</title>
+  <title>SEC Billing: Pricing &amp; features</title>
   <meta name="description" content="Plans, limits, and capabilities for SEC Billing: invoicing, collections, time tracking, reports, and client portal for agencies and firms." />
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/billing-pricing.css" />
@@ -12,7 +12,7 @@
 <body>
   <header class="sec-billing-header" id="sec-billing-header">
     <div class="sec-billing-header__inner">
-      <a href="index.html" class="sec-billing-brand" aria-label="SEC Billing — Home">
+      <a href="index.html" class="sec-billing-brand" aria-label="SEC Billing home">
         <span class="sec-billing-brand__mark" aria-hidden="true">
           <img src="assets/logo/SECLogo.png" alt="" decoding="async" width="120" height="48" />
         </span>
@@ -21,7 +21,6 @@
 
       <nav class="sec-billing-nav" aria-label="Page sections">
         <a href="#features">Features</a>
-        <a href="#product-tour">Product</a>
         <a href="#pricing">Pricing</a>
         <a href="#specifications">Specifications</a>
       </nav>
@@ -44,61 +43,104 @@
   </header>
 
   <main>
-    <div class="marketing-hero">
-      <svg class="marketing-hero__grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
-        <defs>
-          <pattern id="sec-billing-hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.35" />
-          </pattern>
-          <linearGradient id="sec-billing-hero-fade" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f69268" stop-opacity="0.06" />
-            <stop offset="55%" stop-color="#35637c" stop-opacity="0.04" />
-            <stop offset="100%" stop-color="#203f58" stop-opacity="0.05" />
-          </linearGradient>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#sec-billing-hero-grid)" />
-        <rect width="100%" height="100%" fill="url(#sec-billing-hero-fade)" />
-      </svg>
+    <section class="marketing-intro" id="intro" aria-labelledby="intro-heading">
+      <div class="marketing-intro__inner">
+        <h1 class="marketing-intro__headline" id="intro-heading">
+          <span class="marketing-intro__headline-line marketing-intro__headline-line--primary">Invoice and billing support</span>
+          <span class="marketing-intro__headline-line marketing-intro__headline-line--secondary">for service providers</span>
+        </h1>
+        <p class="marketing-intro__lede">
+          We make billing straightforward by bringing invoicing, collections, time tracking, and client-ready PDFs into one workspace. So agencies and firms get paid without taking on full accounting complexity from day one.
+        </p>
+      </div>
+    </section>
 
-      <div class="marketing-hero__inner">
-        <div class="billing-pricing-inner" style="margin: 0; padding: 0">
-          <p class="billing-pricing-breadcrumb">SEC Billing</p>
-          <p class="billing-pricing-kicker">Plans for teams</p>
-          <h1>Pricing &amp; product features</h1>
-          <p class="billing-pricing-lead">
-            SEC Billing is built for companies, agencies, and firms that need invoicing, collections,
-            time tracking, and reporting in one place, without full accounting complexity at launch.
-          </p>
-          <p class="billing-pricing-trial" role="status">
-            <strong>30-day free trial</strong> on every public plan. Full access during the trial; cancel anytime before it ends and you will not be charged.
-          </p>
-        </div>
+    <div class="marketing-hero" id="features">
+      <div class="marketing-hero__intro pricing-page-inner">
+        <p class="marketing-section-label">Platform</p>
+        <h2 class="marketing-section-head marketing-section-head--hero" id="features-heading">Capabilities from your specifications</h2>
+      </div>
 
-        <div class="marketing-hero__visual">
-          <div class="marketing-hero-carousel marketing-carousel" data-hero-carousel aria-roledescription="carousel">
-            <div class="marketing-carousel__viewport" data-carousel-viewport>
-              <div class="marketing-carousel__track" data-carousel-track>
-                <div class="marketing-carousel__slide" data-carousel-slide>
-                  <img src="assets/marketing/dashboard-interface.png" alt="Dashboard showing billing overview and metrics" width="800" height="600" decoding="async" loading="eager" />
-                </div>
-                <div class="marketing-carousel__slide" data-carousel-slide>
-                  <img src="assets/marketing/invoice-example.png" alt="Invoice list and billing workspace" width="800" height="600" decoding="async" loading="lazy" />
-                </div>
-                <div class="marketing-carousel__slide" data-carousel-slide>
-                  <img src="assets/marketing/job-timer-example.png" alt="Job timer and time tracking" width="800" height="600" decoding="async" loading="lazy" />
-                </div>
-                <div class="marketing-carousel__slide" data-carousel-slide>
-                  <img src="assets/marketing/customizable-interface.png" alt="Customizable billing interface" width="800" height="600" decoding="async" loading="lazy" />
-                </div>
-              </div>
-            </div>
-            <div class="marketing-carousel__controls marketing-hero-carousel__toolbar">
-              <button type="button" class="marketing-carousel__btn" data-carousel-prev aria-label="Previous screenshot">‹</button>
-              <div class="marketing-carousel__dots marketing-hero-carousel__dots" data-carousel-dots></div>
-              <button type="button" class="marketing-carousel__btn" data-carousel-next aria-label="Next screenshot">›</button>
-            </div>
+      <div class="sec-billing-marquee" aria-hidden="true">
+        <div class="sec-billing-marquee__track">
+          <div class="sec-billing-marquee__group">
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Isolation</span>
+              <h3>Workspace</h3>
+              <p>Multi-tenant workspaces with strict organization isolation</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Invoicing</span>
+              <h3>Clients &amp; line items</h3>
+              <p>Clients and invoices with line items, tax, and manual payment recording (including partial payments)</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Portal</span>
+              <h3>Secure links</h3>
+              <p>Client portal via secure links: view invoice, download PDF, optional payment-initiated note</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Time</span>
+              <h3>Tracking &amp; rates</h3>
+              <p>Time tracking for admins and bookkeepers: one running timer per user (server-side), manual duration entry, edit past entries, billable flag, and optional rate overrides</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Recurring</span>
+              <h3>Schedules</h3>
+              <p>Recurring invoices / retainers with scheduled draft generation</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Automation</span>
+              <h3>Email templates</h3>
+              <p>Email templates and optional reminder automation with monthly send caps per tier</p>
+            </article>
+          </div>
+          <div class="sec-billing-marquee__group">
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Isolation</span>
+              <h3>Workspace</h3>
+              <p>Multi-tenant workspaces with strict organization isolation</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Invoicing</span>
+              <h3>Clients &amp; line items</h3>
+              <p>Clients and invoices with line items, tax, and manual payment recording (including partial payments)</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Portal</span>
+              <h3>Secure links</h3>
+              <p>Client portal via secure links: view invoice, download PDF, optional payment-initiated note</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Time</span>
+              <h3>Tracking &amp; rates</h3>
+              <p>Time tracking for admins and bookkeepers: one running timer per user (server-side), manual duration entry, edit past entries, billable flag, and optional rate overrides</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Recurring</span>
+              <h3>Schedules</h3>
+              <p>Recurring invoices / retainers with scheduled draft generation</p>
+            </article>
+            <article class="feature-bubble feature-bubble--marquee">
+              <span class="feature-bubble__tag">Automation</span>
+              <h3>Email templates</h3>
+              <p>Email templates and optional reminder automation with monthly send caps per tier</p>
+            </article>
           </div>
         </div>
+      </div>
+
+      <div class="marketing-hero__pricing pricing-page-inner">
+        <p class="billing-pricing-breadcrumb">SEC Billing</p>
+        <p class="billing-pricing-kicker">Plans for teams</p>
+        <h2 class="marketing-hero__pricing-title">Pricing &amp; product features</h2>
+        <p class="billing-pricing-lead">
+          SEC Billing is built for companies, agencies, and firms that need invoicing, collections,
+          time tracking, and reporting in one place, without full accounting complexity at launch.
+        </p>
+        <p class="billing-pricing-trial" role="status">
+          <strong>30-day free trial</strong> on every public plan. Full access during the trial; cancel anytime before it ends and you will not be charged.
+        </p>
       </div>
     </div>
 
@@ -106,151 +148,6 @@
       Set <code>BILLING_APP_BASE</code> in <code>js/config.js</code> to your live SEC Billing app URL (no trailing slash) so
       <strong>Sign up</strong> and <strong>Sign in</strong> open the app.
     </div>
-
-    <section class="marketing-bubbles-section" id="features" aria-labelledby="features-heading">
-      <div class="pricing-page-inner">
-        <p class="marketing-section-label">Platform</p>
-        <h2 class="marketing-section-head" id="features-heading">Capabilities from your specifications</h2>
-
-        <div class="feature-bubble-carousel" data-bubble-carousel aria-roledescription="carousel">
-          <div class="feature-bubble-carousel__viewport" data-carousel-viewport>
-            <div class="feature-bubble-carousel__track" data-carousel-track>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Isolation</span>
-                  <h3>Workspace</h3>
-                  <p>Multi-tenant workspaces with strict organization isolation</p>
-                </article>
-              </div>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Invoicing</span>
-                  <h3>Clients &amp; line items</h3>
-                  <p>Clients and invoices with line items, tax, and manual payment recording (including partial payments)</p>
-                </article>
-              </div>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Portal</span>
-                  <h3>Secure links</h3>
-                  <p>Client portal via secure links: view invoice, download PDF, optional payment-initiated note</p>
-                </article>
-              </div>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Time</span>
-                  <h3>Tracking &amp; rates</h3>
-                  <p>Time tracking for admins and bookkeepers: one running timer per user (server-side), manual duration entry, edit past entries, billable flag, and optional rate overrides</p>
-                </article>
-              </div>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Recurring</span>
-                  <h3>Schedules</h3>
-                  <p>Recurring invoices / retainers with scheduled draft generation</p>
-                </article>
-              </div>
-              <div class="feature-bubble-carousel__slide" data-carousel-slide>
-                <article class="feature-bubble">
-                  <span class="feature-bubble__tag">Automation</span>
-                  <h3>Email templates</h3>
-                  <p>Email templates and optional reminder automation with monthly send caps per tier</p>
-                </article>
-              </div>
-            </div>
-          </div>
-          <div class="feature-bubble-carousel__nav">
-            <button type="button" class="feature-bubble-carousel__btn" data-carousel-prev aria-label="Previous feature">‹</button>
-            <div class="feature-bubble-carousel__dots" data-carousel-dots></div>
-            <button type="button" class="feature-bubble-carousel__btn" data-carousel-next aria-label="Next feature">›</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="marketing-ui-section" id="product-tour" aria-labelledby="product-tour-heading">
-      <div class="pricing-page-inner">
-        <p class="marketing-section-label">Inside the app</p>
-        <h2 class="marketing-section-head" id="product-tour-heading">Screens from SEC Billing</h2>
-
-        <div class="marketing-carousel" data-ui-carousel aria-roledescription="carousel">
-          <div class="marketing-carousel__viewport" data-carousel-viewport>
-            <div class="marketing-carousel__track" data-carousel-track>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/dashboard-interface.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Dashboard</strong>
-                  Operational overview — Dashboard Interface.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/invoice-example.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Invoices</strong>
-                  Invoice Example — list and workspace context.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/invoice-details.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Details</strong>
-                  Invoice Details — line items, totals, and workflow fields.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/invoice-customization.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Customization</strong>
-                  Invoice Customization — branding and presentation controls.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/job-timer-example.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Timer</strong>
-                  Job Timer Example — capture billable time in flow.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/customizable-interface.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Layout</strong>
-                  Customizable Interface — adapt views to how you work.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/optional-overdue-invoices-alert.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Alerts</strong>
-                  Optional Overdue Invoices Alert — surface risk early.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/email-log.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Delivery</strong>
-                  Email Log — automation and sends under control.
-                </figcaption>
-              </figure>
-              <figure class="marketing-carousel__slide" data-carousel-slide>
-                <img src="assets/marketing/data-back-up.png" alt="" width="1200" height="800" decoding="async" loading="lazy" />
-                <figcaption class="marketing-carousel__caption">
-                  <strong>Data protection</strong>
-                  Data Back Up — continuity and recovery messaging in product.
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="marketing-carousel__bar">
-            <div class="marketing-carousel__controls">
-              <button type="button" class="marketing-carousel__btn" data-carousel-prev aria-label="Previous screen">‹</button>
-              <button type="button" class="marketing-carousel__btn" data-carousel-next aria-label="Next screen">›</button>
-            </div>
-            <div class="marketing-carousel__dots" data-carousel-dots></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="billing-section billing-section--dark" id="pricing">
       <div class="pricing-page-inner">
@@ -278,7 +175,7 @@
                 <li>Audit log retention <strong>12 months</strong></li>
               </ul>
               <div class="billing-cta-row">
-                <a class="billing-plan-cta billing-cta-wide" data-billing-path="/register" href="#">Start 30-day free trial — Studio</a>
+                <a class="billing-plan-cta billing-cta-wide" data-billing-path="/register" href="#">Start 30-day free trial, Studio</a>
               </div>
               <p class="billing-plan-trial-note">Then <strong>$70</strong>/month after the trial unless you cancel.</p>
             </div>
@@ -306,7 +203,7 @@
                 <li>Audit log retention <strong>24 months</strong></li>
               </ul>
               <div class="billing-cta-row">
-                <a class="billing-plan-cta billing-plan-cta--accent billing-cta-wide" data-billing-path="/register" href="#">Start 30-day free trial — Agency</a>
+                <a class="billing-plan-cta billing-plan-cta--accent billing-cta-wide" data-billing-path="/register" href="#">Start 30-day free trial, Agency</a>
               </div>
               <p class="billing-plan-trial-note">Pricing confirmed before activation; same <strong>30-day</strong> trial terms apply.</p>
             </div>
@@ -369,7 +266,7 @@
               <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>CSV exports for accountants (invoices, payments, clients, and line items; depth varies by plan)</span></div>
               <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>Recurring invoices / retainers with scheduled draft generation</span></div>
               <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>Email templates and optional reminder automation with monthly send caps per tier</span></div>
-              <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>Roles: admin, bookkeeper, and viewer — Studio and Agency let you assign every seat to admin or bookkeeper if needed (viewer when you want read-only)</span></div>
+              <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>Roles: admin, bookkeeper, and viewer. Studio and Agency let you assign every seat to admin or bookkeeper if needed (viewer when you want read-only)</span></div>
               <div class="billing-check-row"><span class="billing-check-row__icon" aria-hidden="true">✓</span><span>Password reset, email job history with retry for failed sends, and audit logging for operations</span></div>
             </div>
           </div>
@@ -381,7 +278,7 @@
       <div class="pricing-page-inner billing-footer-cta">
         <div>
           <h2>Ready to run billing in one workspace?</h2>
-          <p>Start a <strong>30-day free trial</strong> — full plan features, cancel anytime before billing begins.</p>
+          <p>Start a <strong>30-day free trial</strong>: full plan features, cancel anytime before billing begins.</p>
         </div>
         <div class="billing-footer-cta__buttons">
           <a class="billing-plan-cta billing-plan-cta--accent" data-billing-path="/register" href="#">Start free trial</a>
@@ -396,7 +293,7 @@
   </main>
 
   <footer class="sec-billing-site-footer">
-    SEC Billing is a product by Shaquille Comrie — SEC.
+    SEC Billing is a product by Shaquille Comrie, SEC.
     Freelance services &amp; quotes: <a href="https://elreyriquez.github.io/sec-services/" target="_blank" rel="noopener noreferrer">SEC services</a>.
     &nbsp;·&nbsp;
     <a data-billing-path="/privacy" href="#">Privacy Policy</a>
@@ -426,6 +323,5 @@
     });
   </script>
   <script src="js/nav.js"></script>
-  <script src="js/marketing.js"></script>
 </body>
 </html>
