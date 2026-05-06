@@ -2,22 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap");
 
 :root {
-  --bg: #f8f6f2;
+  /* Alex Cristache palette — fluffball, lime white, melon, blueprint, regal, count's black */
+  --fluffball: #f9f7f6;
+  --lime-white: #e9e4df;
+  --melon: #f69268;
+  --melon-hover: #e07d52;
+  --blueprint: #35637c;
+  --regal: #203f58;
+  --counts-black: #102030;
+
+  --bg: var(--fluffball);
   --surface: #ffffff;
-  --surface-muted: #f0ebe3;
-  --text: #1a1a1a;
-  --text-muted: #555555;
-  --accent: #c4952e;
-  --accent-hover: #a67d24;
-  --border: rgba(0, 0, 0, 0.08);
-  --border-strong: rgba(0, 0, 0, 0.14);
+  --surface-muted: var(--lime-white);
+  --text: var(--counts-black);
+  --text-muted: #4a5f6d;
+  --accent: var(--melon);
+  --accent-hover: var(--melon-hover);
+  --border: rgba(16, 32, 48, 0.09);
+  --border-strong: rgba(16, 32, 48, 0.16);
   --radius: 8px;
   --radius-panel: 10px;
   --font-ui: "DM Sans", system-ui, sans-serif;
   --font-head: "Oswald", system-ui, sans-serif;
-  --header-bg: #0d0d0d;
-  --pricing-studio-blue: #1a3f6c;
-  --pricing-studio-blue-hover: #153556;
+  --header-bg: var(--regal);
+  --pricing-studio-blue: var(--regal);
+  --pricing-studio-blue-hover: #1a3450;
+  --shadow-float: 0 4px 24px rgba(16, 32, 48, 0.12);
 }
 
 *,
@@ -65,12 +75,55 @@ h3 {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0.6rem 1.25rem;
-  /* Grid keeps CTAs on the right even with a hidden menu control in the DOM */
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1rem;
   min-height: 4rem;
+}
+
+.sec-billing-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1.35rem;
+  flex-wrap: wrap;
+}
+
+.sec-billing-nav a {
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.sec-billing-nav a:hover {
+  color: #fff !important;
+}
+
+@media (min-width: 821px) {
+  .sec-billing-nav {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .sec-billing-brand {
+    grid-column: 1;
+  }
+
+  .sec-billing-header__cta {
+    grid-column: 3;
+  }
+
+  .sec-billing-menu-toggle {
+    display: none !important;
+  }
 }
 
 .sec-billing-brand {
@@ -151,14 +204,14 @@ h3 {
 
 .sec-billing-btn--primary {
   background: var(--accent);
-  color: #1a1a1a !important;
+  color: var(--counts-black) !important;
   border-color: var(--accent);
 }
 
 .sec-billing-btn--primary:hover:not(.billing-cta-disabled) {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
-  color: #1a1a1a !important;
+  color: var(--counts-black) !important;
 }
 
 .billing-cta-disabled {
@@ -225,9 +278,25 @@ h3 {
     grid-row: 1;
   }
 
-  .sec-billing-header__cta {
+  .sec-billing-nav {
     grid-column: 1 / -1;
     grid-row: 2;
+    justify-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.25rem;
+    display: none;
+  }
+
+  .sec-billing-nav a {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sec-billing-header__cta {
+    grid-column: 1 / -1;
+    grid-row: 3;
     justify-self: stretch;
     display: none;
     width: 100%;
@@ -240,6 +309,10 @@ h3 {
 
   .sec-billing-header__cta .sec-billing-btn {
     width: 100%;
+  }
+
+  .sec-billing-header.is-open .sec-billing-nav {
+    display: flex;
   }
 
   .sec-billing-header.is-open .sec-billing-header__cta {

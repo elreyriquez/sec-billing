@@ -1,10 +1,7 @@
 /* SEC Billing — standalone pricing page (GitHub Pages), aligned with billing app tokens */
 :root {
-  --shadow-panel: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px var(--border);
-  --shadow-float: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --pricing-studio-blue: #1a3f6c;
-  --pricing-studio-blue-hover: #153556;
-  --accent-light: rgba(196, 149, 46, 0.12);
+  --shadow-panel: 0 1px 4px rgba(16, 32, 48, 0.06), 0 0 0 1px var(--border);
+  --accent-light: rgba(246, 146, 104, 0.15);
 }
 
 .billing-pricing-breadcrumb {
@@ -32,7 +29,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--blueprint);
   margin: 0 0 0.75rem;
 }
 
@@ -78,9 +75,9 @@
 }
 
 .billing-section--dark {
-  background: #0d0d0d;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--counts-black);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   color: #fff;
 }
 
@@ -131,7 +128,7 @@
   top: 0.85rem;
   right: 1.25rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--counts-black);
   font-family: var(--font-head);
   font-size: 0.58rem;
   letter-spacing: 0.12em;
@@ -244,13 +241,13 @@
 .billing-plan-cta--accent {
   background: var(--accent);
   border-color: var(--accent);
-  color: #1a1a1a !important;
+  color: var(--counts-black) !important;
 }
 
 .billing-plan-cta--accent:hover:not(.billing-cta-disabled) {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
-  color: #1a1a1a !important;
+  color: var(--counts-black) !important;
 }
 
 .billing-plan-cta--ghost {
@@ -306,7 +303,7 @@
 }
 
 .pricing-table th:nth-child(1) {
-  background: #0d0d0d;
+  background: var(--counts-black);
   color: #fff;
 }
 
@@ -317,7 +314,7 @@
 
 .pricing-table th:nth-child(3) {
   background: var(--accent);
-  color: #0d0d0d;
+  color: var(--counts-black);
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -361,7 +358,7 @@
   height: 1.1rem;
   border-radius: 50%;
   background: var(--accent-light);
-  color: var(--accent-hover);
+  color: var(--blueprint);
   display: flex;
   align-items: center;
   justify-content: center;
