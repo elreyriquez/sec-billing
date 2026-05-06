@@ -61,18 +61,21 @@
   padding: 2.5rem 0 2.75rem;
 }
 
-.marketing-hero__intro,
-.marketing-hero__pricing {
-  padding-inline: 1.5rem;
-}
-
 .marketing-hero__intro {
+  padding-inline: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.marketing-hero__pricing {
-  padding-top: 2rem;
-  margin-top: 0.5rem;
+.marketing-pricing-intro {
+  padding: 2.35rem 0 2.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.marketing-pricing-intro .marketing-hero__pricing {
+  padding-inline: 1.5rem;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .marketing-section-head--hero {
@@ -188,29 +191,29 @@
   color: var(--counts-black);
 }
 
-.marketing-hero .billing-pricing-breadcrumb {
+.marketing-pricing-intro .billing-pricing-breadcrumb {
   color: rgba(16, 32, 48, 0.62);
 }
 
-.marketing-hero .billing-pricing-kicker {
+.marketing-pricing-intro .billing-pricing-kicker {
   color: var(--regal);
 }
 
-.marketing-hero .marketing-hero__pricing-title {
+.marketing-pricing-intro .marketing-hero__pricing-title {
   color: var(--counts-black);
 }
 
-.marketing-hero .billing-pricing-lead {
+.marketing-pricing-intro .billing-pricing-lead {
   color: #3d4e5c;
 }
 
-.marketing-hero .billing-pricing-trial {
-  background: rgba(255, 255, 255, 0.72);
-  border-left-color: var(--regal);
+.marketing-pricing-intro .billing-pricing-trial {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 3px solid var(--regal);
   color: var(--counts-black);
 }
 
-.marketing-hero .billing-pricing-trial strong {
+.marketing-pricing-intro .billing-pricing-trial strong {
   color: var(--counts-black);
 }
 

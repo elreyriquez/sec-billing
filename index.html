@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/billing-pricing.css" />
   <link rel="stylesheet" href="css/marketing.css" />
+  <link rel="stylesheet" href="css/dashboard-preview.css" />
 </head>
 <body>
   <header class="sec-billing-header" id="sec-billing-header">
@@ -21,6 +22,7 @@
 
       <nav class="sec-billing-nav" aria-label="Page sections">
         <a href="#features">Features</a>
+        <a href="#ui-previews">Preview</a>
         <a href="#pricing">Pricing</a>
         <a href="#specifications">Specifications</a>
       </nav>
@@ -129,25 +131,419 @@
           </div>
         </div>
       </div>
-
-      <div class="marketing-hero__pricing pricing-page-inner">
-        <p class="billing-pricing-breadcrumb">SEC Billing</p>
-        <p class="billing-pricing-kicker">Plans for teams</p>
-        <h2 class="marketing-hero__pricing-title">Pricing &amp; product features</h2>
-        <p class="billing-pricing-lead">
-          SEC Billing is built for companies, agencies, and firms that need invoicing, collections,
-          time tracking, and reporting in one place, without full accounting complexity at launch.
-        </p>
-        <p class="billing-pricing-trial" role="status">
-          <strong>30-day free trial</strong> on every public plan. Full access during the trial; cancel anytime before it ends and you will not be charged.
-        </p>
-      </div>
     </div>
 
     <div id="billing-app-config-warn" class="billing-config-warn billing-pricing-inner" hidden>
       Set <code>BILLING_APP_BASE</code> in <code>js/config.js</code> to your live SEC Billing app URL (no trailing slash) so
       <strong>Sign up</strong> and <strong>Sign in</strong> open the app.
     </div>
+
+    <section class="marketing-ui-previews" id="ui-previews" aria-labelledby="ui-previews-heading">
+      <div class="pricing-page-inner">
+        <p class="marketing-section-label">Workspace</p>
+        <h2 class="marketing-section-head" id="ui-previews-heading">UI previews</h2>
+      </div>
+      <div class="marketing-ui-previews__shell pricing-page-inner">
+        <div class="marketing-ui-previews__carousel" data-ui-carousel role="region" aria-roledescription="carousel" aria-label="Product UI previews">
+          <div class="marketing-ui-previews__controls">
+            <button type="button" class="marketing-ui-previews__arrow" data-carousel-prev aria-label="Previous preview">
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <div class="marketing-ui-previews__dots" role="tablist" aria-label="Choose UI preview">
+              <button type="button" class="marketing-ui-previews__dot-btn" role="tab" aria-selected="true" aria-controls="ui-preview-panel-0" id="ui-preview-tab-0" data-carousel-dot="0">
+                <span class="marketing-ui-previews__dot" aria-hidden="true"></span>
+                <span class="marketing-ui-previews__dot-label">Dashboard</span>
+              </button>
+              <button type="button" class="marketing-ui-previews__dot-btn" role="tab" aria-selected="false" aria-controls="ui-preview-panel-1" id="ui-preview-tab-1" data-carousel-dot="1">
+                <span class="marketing-ui-previews__dot" aria-hidden="true"></span>
+                <span class="marketing-ui-previews__dot-label">Clients</span>
+              </button>
+              <button type="button" class="marketing-ui-previews__dot-btn" role="tab" aria-selected="false" aria-controls="ui-preview-panel-2" id="ui-preview-tab-2" data-carousel-dot="2">
+                <span class="marketing-ui-previews__dot" aria-hidden="true"></span>
+                <span class="marketing-ui-previews__dot-label">Invoices</span>
+              </button>
+            </div>
+            <button type="button" class="marketing-ui-previews__arrow" data-carousel-next aria-label="Next preview">
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
+          <p class="marketing-ui-previews__caption">
+            <span data-carousel-caption id="ui-preview-caption" aria-live="polite">Dashboard</span>
+          </p>
+          <div class="marketing-ui-previews__viewport" data-ui-carousel-viewport>
+            <div class="marketing-ui-previews__track" data-ui-carousel-track>
+              <div class="marketing-ui-previews__slide" id="ui-preview-panel-0" role="tabpanel" aria-labelledby="ui-preview-tab-0" data-carousel-index="0" aria-hidden="false">
+                <div class="marketing-ui-previews__frame">
+                  <div class="sec-billing-dash-preview" data-dashboard-preview>
+          <header class="sec-billing-dash-preview__header">
+            <h3 class="sec-billing-dash-preview__title">Dashboard</h3>
+            <p class="sec-billing-dash-preview__subtitle">
+              Organisation overview · <time data-preview-subtitle-date datetime=""></time>
+            </p>
+          </header>
+
+          <div class="sec-billing-dash-preview__stats">
+            <article class="sec-billing-dash-preview__stat">
+              <p class="sec-billing-dash-preview__stat-label">Outstanding</p>
+              <p class="sec-billing-dash-preview__stat-value sec-billing-dash-preview__stat-value--default" data-preview-outstanding>$0.00</p>
+              <p class="sec-billing-dash-preview__stat-meta">4 open invoices</p>
+            </article>
+            <article class="sec-billing-dash-preview__stat">
+              <p class="sec-billing-dash-preview__stat-label">Overdue</p>
+              <p class="sec-billing-dash-preview__stat-value sec-billing-dash-preview__stat-value--danger" data-preview-overdue>$0.00</p>
+              <p class="sec-billing-dash-preview__stat-meta">1 invoice</p>
+            </article>
+            <article class="sec-billing-dash-preview__stat">
+              <p class="sec-billing-dash-preview__stat-label">Collected this month</p>
+              <p class="sec-billing-dash-preview__stat-value sec-billing-dash-preview__stat-value--success" data-preview-collected>$0.00</p>
+              <p class="sec-billing-dash-preview__stat-meta"><span data-preview-month-range></span></p>
+            </article>
+          </div>
+
+          <div class="sec-billing-dash-preview__card">
+            <div class="sec-billing-dash-preview__card-head">
+              <div style="flex: 1; min-width: 0">
+                <h3>Time insights</h3>
+                <p class="sec-billing-dash-preview__card-desc">
+                  Organisation time · last 7 days, this month&apos;s billable mix, week-over-week, and where hours went.
+                </p>
+              </div>
+              <span class="sec-billing-dash-preview__ghost">Time</span>
+            </div>
+            <div class="sec-billing-dash-preview__insights">
+              <div class="sec-billing-dash-preview__col">
+                <div class="sec-billing-dash-preview__seven-wrap">
+                  <p class="sec-billing-dash-preview__micro sec-billing-dash-preview__micro--chart-head">Last 7 days (logged)</p>
+                  <div class="sec-billing-dash-preview__bars" role="img" aria-label="Seven day activity preview">
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                    <div class="sec-billing-dash-preview__bar-col">
+                      <span class="sec-billing-dash-preview__bar-val" data-preview-bar-tip>-</span>
+                      <div class="sec-billing-dash-preview__bar-fill-wrap">
+                        <div class="sec-billing-dash-preview__bar-fill" data-preview-bar-fill></div>
+                      </div>
+                      <span class="sec-billing-dash-preview__bar-day" data-preview-day-label></span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="sec-billing-dash-preview__micro">This month · billable vs non-billable</p>
+                  <div class="sec-billing-dash-preview__meter" title="Billable vs non-billable mix">
+                    <div class="sec-billing-dash-preview__meter-bill" data-preview-meter-bill></div>
+                    <div class="sec-billing-dash-preview__meter-rest"></div>
+                  </div>
+                  <div class="sec-billing-dash-preview__meter-legend">
+                    <span><span style="color: #15803d; font-weight: 600">●</span> Billable <span data-preview-bill-legend>0m</span></span>
+                    <span><span style="opacity: 0.5; font-weight: 600">●</span> Non-billable <span data-preview-non-legend>0m</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="sec-billing-dash-preview__col">
+                <div class="sec-billing-dash-preview__week-box">
+                  <div>
+                    <p class="sec-billing-dash-preview__week-k">This week</p>
+                    <p class="sec-billing-dash-preview__week-v" data-preview-week-this>0h</p>
+                  </div>
+                  <div>
+                    <p class="sec-billing-dash-preview__week-k">Last week</p>
+                    <p class="sec-billing-dash-preview__week-v sec-billing-dash-preview__week-v--muted" data-preview-week-last>3.0h</p>
+                  </div>
+                  <div class="sec-billing-dash-preview__week-delta" data-preview-week-delta>
+                    <span>&#8595; 3h less than last week</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="sec-billing-dash-preview__micro">Top projects (this month)</p>
+                  <p class="sec-billing-dash-preview__top-empty">No project-linked time this month.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  </div>
+                </div>
+
+              <div class="marketing-ui-previews__slide" id="ui-preview-panel-1" role="tabpanel" aria-labelledby="ui-preview-tab-1" data-carousel-index="1" aria-hidden="true">
+                <div class="marketing-ui-previews__frame">
+                  <div class="sec-billing-page-preview sec-billing-clients-preview">
+                    <header class="sec-billing-page-preview__header">
+                      <div>
+                        <h3 class="sec-billing-page-preview__title">Clients</h3>
+                        <p class="sec-billing-page-preview__subtitle">4 clients</p>
+                      </div>
+                      <button type="button" class="sec-billing-page-preview__btn-primary" tabindex="-1">+ New Client</button>
+                    </header>
+                    <div class="sec-billing-page-preview__toolbar sec-billing-clients-preview__toolbar">
+                      <div class="sec-billing-clients-preview__toggle" role="group" aria-label="Client scope">
+                        <button type="button" class="sec-billing-clients-preview__seg" tabindex="-1">My clients</button>
+                        <button type="button" class="sec-billing-clients-preview__seg sec-billing-clients-preview__seg--active" tabindex="-1">All clients</button>
+                      </div>
+                      <input type="search" class="sec-billing-page-preview__search" placeholder="Search clients..." readonly tabindex="-1" />
+                      <label class="sec-billing-page-preview__check"><input type="checkbox" tabindex="-1" /> Show archived</label>
+                      <button type="button" class="sec-billing-page-preview__btn-secondary" tabindex="-1">Search</button>
+                    </div>
+                    <div class="sec-billing-page-preview__table-scroll">
+                      <table class="sec-billing-page-preview__table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Invoices</th>
+                            <th scope="col">Open balance</th>
+                            <th scope="col">Assigned to</th>
+                            <th scope="col">Since</th>
+                            <th scope="col"><span class="sec-billing-page-preview__sr-only">Actions</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="sec-billing-page-preview__accent">Caribbean Fintech Ltd</span></td>
+                            <td>Marcus Brown</td>
+                            <td>finance@caribfintech.example</td>
+                            <td>3</td>
+                            <td><span class="sec-billing-page-preview__accent">$13,921.32</span></td>
+                            <td>Alex Morgan</td>
+                            <td>Apr 14, 2026</td>
+                            <td><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button></td>
+                          </tr>
+                          <tr>
+                            <td><span class="sec-billing-page-preview__accent">Harbour Bay Hotels</span></td>
+                            <td>Patricia Williams</td>
+                            <td>accounts@harbourbay.example</td>
+                            <td>2</td>
+                            <td><span class="sec-billing-page-preview__accent">$4,750.00</span></td>
+                            <td><span class="sec-billing-page-preview__faint">Unassigned</span></td>
+                            <td>Apr 14, 2026</td>
+                            <td><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button></td>
+                          </tr>
+                          <tr>
+                            <td><span class="sec-billing-page-preview__accent">Northwind Advisory</span></td>
+                            <td>Jordan Ellis</td>
+                            <td>billing@northwind-advisory.example</td>
+                            <td>1</td>
+                            <td>&#8212;</td>
+                            <td><span class="sec-billing-page-preview__faint">Unassigned</span></td>
+                            <td>May 5, 2026</td>
+                            <td><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button></td>
+                          </tr>
+                          <tr>
+                            <td><span class="sec-billing-page-preview__accent">Tropical Harvest Foods</span></td>
+                            <td>&#8212;</td>
+                            <td>ops@tropicalharvest.example</td>
+                            <td>1</td>
+                            <td><span class="sec-billing-page-preview__accent">$3,200.00</span></td>
+                            <td><span class="sec-billing-page-preview__faint">Unassigned</span></td>
+                            <td>Apr 14, 2026</td>
+                            <td><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="marketing-ui-previews__slide" id="ui-preview-panel-2" role="tabpanel" aria-labelledby="ui-preview-tab-2" data-carousel-index="2" aria-hidden="true">
+                <div class="marketing-ui-previews__frame">
+                  <div class="sec-billing-page-preview sec-billing-inv-preview">
+                    <header class="sec-billing-page-preview__header">
+                      <div>
+                        <h3 class="sec-billing-page-preview__title">Invoices</h3>
+                        <p class="sec-billing-page-preview__subtitle">7 invoices, grouped by project</p>
+                      </div>
+                      <button type="button" class="sec-billing-page-preview__btn-primary" tabindex="-1">+ New Invoice</button>
+                    </header>
+                    <div class="sec-billing-page-preview__toolbar sec-billing-inv-preview__toolbar">
+                      <input type="search" class="sec-billing-page-preview__search" placeholder="Search invoices..." readonly tabindex="-1" />
+                      <div class="sec-billing-inv-preview__select-wrap">
+                        <select class="sec-billing-inv-preview__select" aria-label="Status filter" tabindex="-1">
+                          <option>All statuses</option>
+                        </select>
+                      </div>
+                      <div class="sec-billing-inv-preview__select-wrap">
+                        <select class="sec-billing-inv-preview__select" aria-label="Client filter" tabindex="-1">
+                          <option>All clients</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="sec-billing-page-preview__table-scroll">
+                      <table class="sec-billing-page-preview__table sec-billing-inv-preview__table">
+                        <colgroup>
+                          <col class="sec-billing-inv-preview__col-inv" />
+                          <col class="sec-billing-inv-preview__col-client" />
+                          <col class="sec-billing-inv-preview__col-due" />
+                          <col class="sec-billing-inv-preview__col-status" />
+                          <col class="sec-billing-inv-preview__col-amt" />
+                          <col class="sec-billing-inv-preview__col-bal" />
+                          <col class="sec-billing-inv-preview__col-act" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">Invoice</th>
+                            <th scope="col">Client</th>
+                            <th scope="col">Due date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Balance</th>
+                            <th scope="col"><span class="sec-billing-page-preview__sr-only">Actions</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="7" class="sec-billing-inv-preview__group-cell">
+                              <button type="button" class="sec-billing-inv-preview__group-toggle" data-inv-group-toggle aria-expanded="true" aria-controls="inv-nested-wrap" id="inv-group-head">
+                                <span class="sec-billing-inv-preview__caret" aria-hidden="true"></span>
+                                <span><strong>No project</strong> <span class="sec-billing-inv-preview__muted">(7 invoices)</span></span>
+                              </button>
+                              <div id="inv-nested-wrap" class="sec-billing-inv-preview__nested-wrap">
+                                <div class="sec-billing-inv-preview__nested-inner">
+                                  <table class="sec-billing-inv-preview__nested">
+                                    <colgroup>
+                                      <col class="sec-billing-inv-preview__col-inv" />
+                                      <col class="sec-billing-inv-preview__col-client" />
+                                      <col class="sec-billing-inv-preview__col-due" />
+                                      <col class="sec-billing-inv-preview__col-status" />
+                                      <col class="sec-billing-inv-preview__col-amt" />
+                                      <col class="sec-billing-inv-preview__col-bal" />
+                                      <col class="sec-billing-inv-preview__col-act" />
+                                    </colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00007</span></td>
+                                        <td>Northwind Advisory</td>
+                                        <td>Jun 3, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--muted">Ready</span></td>
+                                        <td>$240.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$240.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00006</span></td>
+                                        <td>Caribbean Fintech Ltd</td>
+                                        <td>May 28, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--sent">Sent</span></td>
+                                        <td>$4,200.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$2,100.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00005</span></td>
+                                        <td>Harbour Bay Hotels</td>
+                                        <td>Jun 10, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--partial">Partial</span></td>
+                                        <td>$1,890.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$945.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00004</span></td>
+                                        <td>Tropical Harvest Foods</td>
+                                        <td>May 15, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--sent">Sent</span></td>
+                                        <td>$320.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$0.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00003</span></td>
+                                        <td>Caribbean Fintech Ltd</td>
+                                        <td>Apr 30, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--muted">Ready</span></td>
+                                        <td>$980.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$980.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00002</span></td>
+                                        <td>Harbour Bay Hotels</td>
+                                        <td>May 1, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--sent">Sent</span></td>
+                                        <td>$2,860.00</td>
+                                        <td><span class="sec-billing-page-preview__accent">$2,860.00</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="sec-billing-page-preview__accent">INV-00001</span></td>
+                                        <td>Northwind Advisory</td>
+                                        <td>Jun 18, 2026</td>
+                                        <td><span class="sec-billing-inv-preview__pill sec-billing-inv-preview__pill--partial">Partial</span></td>
+                                        <td>$512.50</td>
+                                        <td><span class="sec-billing-page-preview__accent">$256.25</span></td>
+                                        <td class="sec-billing-inv-preview__actions"><button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">View</button> <button type="button" class="sec-billing-page-preview__linkish" tabindex="-1">Edit</button></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marketing-pricing-intro" id="pricing-intro" aria-labelledby="pricing-intro-heading">
+      <div class="marketing-hero__pricing pricing-page-inner">
+        <p class="billing-pricing-breadcrumb">SEC Billing</p>
+        <p class="billing-pricing-kicker">Plans for teams</p>
+        <h2 class="marketing-hero__pricing-title" id="pricing-intro-heading">Pricing &amp; product features</h2>
+        <p class="billing-pricing-lead">
+          SEC Billing is built for companies, agencies, and firms that need invoicing, collections,
+          time tracking, and reporting in one place, without full accounting complexity at launch.
+        </p>
+        <p class="billing-pricing-trial" role="status">
+          <strong>30-day free trial</strong> for a limited time on every public plan. Full access during the trial; cancel anytime before it ends and you will not be charged.
+        </p>
+      </div>
+    </section>
 
     <section class="billing-section billing-section--dark" id="pricing">
       <div class="pricing-page-inner">
@@ -323,5 +719,7 @@
     });
   </script>
   <script src="js/nav.js"></script>
+  <script src="js/ui-preview-carousel.js"></script>
+  <script src="js/dashboard-preview.js"></script>
 </body>
 </html>
