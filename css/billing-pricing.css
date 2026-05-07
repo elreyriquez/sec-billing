@@ -194,22 +194,149 @@
   color: var(--text-muted);
 }
 
-/* Cycle visibility — toggled by data-cycle on the plan grid */
-[data-pricing-grid][data-cycle="monthly"] .billing-cycle--annual {
+/* Cycle visibility — toggled by data-pricing-cycle on <body> so all grids react */
+body[data-pricing-cycle="monthly"] .billing-cycle--annual,
+body:not([data-pricing-cycle]) .billing-cycle--annual {
   display: none !important;
 }
 
-[data-pricing-grid][data-cycle="annual"] .billing-cycle--monthly {
+body[data-pricing-cycle="annual"] .billing-cycle--monthly {
   display: none !important;
 }
 
-body[data-pricing-cycle="annual"] .billing-cycle-note--annual,
 .billing-cycle-note--annual {
   display: none;
 }
 
 body[data-pricing-cycle="annual"] .billing-cycle-note--annual {
   display: block;
+}
+
+/* Plans carousel (Studio & Agency, then Solo) */
+.billing-plans-carousel {
+  margin-top: 1.25rem;
+}
+
+.billing-plans-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+}
+
+.billing-plans-carousel__arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.15s ease;
+}
+
+.billing-plans-carousel__arrow:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--accent);
+}
+
+.billing-plans-carousel__arrow:active {
+  transform: scale(0.96);
+}
+
+.billing-plans-carousel__dots {
+  display: flex;
+  align-items: stretch;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.billing-plans-carousel__dot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.billing-plans-carousel__dot-btn:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.billing-plans-carousel__dot-btn[aria-selected="true"] {
+  border-color: var(--accent);
+  background: rgba(246, 146, 104, 0.22);
+  color: #fff;
+}
+
+.billing-plans-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+.billing-plans-carousel__dot-btn[aria-selected="true"] .billing-plans-carousel__dot {
+  opacity: 1;
+  background: var(--accent);
+}
+
+.billing-plans-carousel__dot-label {
+  white-space: nowrap;
+}
+
+.billing-plans-carousel__caption {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.billing-plans-carousel__viewport {
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+}
+
+.billing-plans-carousel__track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.billing-plans-carousel__slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0.25rem;
+}
+
+.billing-plan-grid--solo {
+  grid-template-columns: minmax(0, 460px);
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .billing-plans-carousel__track {
+    transition: none;
+  }
 }
 
 /* Collapsible section (native <details>) */

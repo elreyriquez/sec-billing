@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/marketing.css" />
   <link rel="stylesheet" href="css/dashboard-preview.css" />
 </head>
-<body>
+<body data-pricing-cycle="monthly">
   <header class="sec-billing-header" id="sec-billing-header">
     <div class="sec-billing-header__inner">
       <a href="index.html" class="sec-billing-brand" aria-label="SEC Billing home">
@@ -589,7 +589,30 @@
         </div>
         <p class="billing-cycle-note billing-cycle-note--annual">Annual plans are billed upfront and skip the 30-day free trial.</p>
 
-        <div class="billing-plan-grid" data-pricing-grid data-cycle="monthly">
+        <div class="billing-plans-carousel" data-plans-carousel role="region" aria-roledescription="carousel" aria-label="Plan groups">
+          <div class="billing-plans-carousel__controls">
+            <button type="button" class="billing-plans-carousel__arrow" data-plans-prev aria-label="Previous plan group">
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <div class="billing-plans-carousel__dots" role="tablist" aria-label="Choose a plan group">
+              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="true" data-plan-dot="0" aria-controls="plan-slide-0" id="plan-tab-0">
+                <span class="billing-plans-carousel__dot" aria-hidden="true"></span>
+                <span class="billing-plans-carousel__dot-label">Studio &amp; Agency</span>
+              </button>
+              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="false" data-plan-dot="1" aria-controls="plan-slide-1" id="plan-tab-1">
+                <span class="billing-plans-carousel__dot" aria-hidden="true"></span>
+                <span class="billing-plans-carousel__dot-label">Solo</span>
+              </button>
+            </div>
+            <button type="button" class="billing-plans-carousel__arrow" data-plans-next aria-label="Next plan group">
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
+          <p class="billing-plans-carousel__caption" data-plans-caption aria-live="polite">Studio &amp; Agency</p>
+          <div class="billing-plans-carousel__viewport">
+            <div class="billing-plans-carousel__track" data-plans-track>
+              <div class="billing-plans-carousel__slide" id="plan-slide-0" role="tabpanel" aria-labelledby="plan-tab-0" data-plan-index="0" aria-hidden="false">
+                <div class="billing-plan-grid" data-pricing-grid data-cycle="monthly">
           <div class="billing-plan-card">
             <div class="billing-plan-card__head">
               <span class="billing-plan-tier">Studio</span>
@@ -667,6 +690,55 @@
               </div>
               <p class="billing-plan-trial-note billing-cycle--monthly">Then <strong>$129</strong>/month after the trial unless you cancel.</p>
               <p class="billing-plan-trial-note billing-cycle--annual">Annual plans are billed upfront. The 30-day free trial does not apply.</p>
+            </div>
+          </div>
+                </div>
+              </div>
+
+              <div class="billing-plans-carousel__slide" id="plan-slide-1" role="tabpanel" aria-labelledby="plan-tab-1" data-plan-index="1" aria-hidden="true">
+                <div class="billing-plan-grid billing-plan-grid--solo">
+                  <div class="billing-plan-card">
+                    <div class="billing-plan-card__head">
+                      <span class="billing-plan-tier">Solo</span>
+
+                      <div class="billing-plan-price billing-plan-price--promo billing-cycle--monthly">
+                        <span class="billing-plan-price__strike" aria-label="Regular price twenty-five dollars per month"><s>$25</s></span>
+                        <strong>$0</strong>
+                        <span class="text-muted" style="font-size: 0.9rem">/ month</span>
+                      </div>
+                      <p class="billing-plan-price__note billing-cycle--monthly">Free during the limited-time trial.</p>
+
+                      <div class="billing-plan-price billing-cycle--annual">
+                        <strong>$23.75</strong>
+                        <span class="text-muted" style="font-size: 0.9rem">/ month</span>
+                      </div>
+                      <p class="billing-plan-price__note billing-cycle--annual">Billed <strong>$285</strong> annually &middot; saves $15.</p>
+
+                      <p class="text-muted" style="margin: 0; font-size: 0.85rem; line-height: 1.45">
+                        <strong>1 seat only</strong>, designed for independent operators. Adding staff or bookkeepers requires upgrading to Studio or Agency.
+                      </p>
+                    </div>
+                    <div class="billing-plan-card__body">
+                      <ul>
+                        <li>Up to <strong>50</strong> active clients</li>
+                        <li>Up to <strong>100</strong> invoices per calendar month</li>
+                        <li>Manual payment recording, invoice PDFs, and core reporting suited to a single operator</li>
+                        <li>CSV exports (invoices, payments, clients &mdash; depth suited to Solo)</li>
+                        <li>Audit log retention <strong>6 months</strong></li>
+                      </ul>
+                      <p class="text-muted" style="margin: 0.85rem 0 0; font-size: 0.78rem; line-height: 1.5">
+                        Not included on Solo (upgrade for these): client portal, recurring invoices, email automation, advanced reports, and multi-seat collaboration.
+                      </p>
+                      <div class="billing-cta-row">
+                        <a class="billing-plan-cta billing-cta-wide billing-cycle--monthly" data-billing-path="/register?plan=solo" href="#">Start 30-day free trial, Solo</a>
+                        <a class="billing-plan-cta billing-cta-wide billing-cycle--annual" data-billing-path="/register?plan=solo&amp;cycle=annual" href="#">Pay $285 / year, Solo</a>
+                      </div>
+                      <p class="billing-plan-trial-note billing-cycle--monthly">Then <strong>$25</strong>/month after the trial unless you cancel.</p>
+                      <p class="billing-plan-trial-note billing-cycle--annual">Annual plans are billed upfront. The 30-day free trial does not apply.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -852,6 +924,7 @@
   <script src="js/nav.js"></script>
   <script src="js/ui-preview-carousel.js"></script>
   <script src="js/dashboard-preview.js"></script>
+  <script src="js/plans-carousel.js"></script>
   <script src="js/pricing-toggle.js"></script>
 </body>
 </html>
