@@ -590,25 +590,6 @@
         <p class="billing-cycle-note billing-cycle-note--annual">Annual plans are billed upfront and skip the 30-day free trial.</p>
 
         <div class="billing-plans-carousel" data-plans-carousel role="region" aria-roledescription="carousel" aria-label="Plan groups">
-          <div class="billing-plans-carousel__controls">
-            <button type="button" class="billing-plans-carousel__arrow" data-plans-prev aria-label="Previous plan group">
-              <span aria-hidden="true">&#8249;</span>
-            </button>
-            <div class="billing-plans-carousel__dots" role="tablist" aria-label="Choose a plan group">
-              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="true" data-plan-dot="0" aria-controls="plan-slide-0" id="plan-tab-0">
-                <span class="billing-plans-carousel__dot" aria-hidden="true"></span>
-                <span class="billing-plans-carousel__dot-label">Studio &amp; Agency</span>
-              </button>
-              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="false" data-plan-dot="1" aria-controls="plan-slide-1" id="plan-tab-1">
-                <span class="billing-plans-carousel__dot" aria-hidden="true"></span>
-                <span class="billing-plans-carousel__dot-label">Solo</span>
-              </button>
-            </div>
-            <button type="button" class="billing-plans-carousel__arrow" data-plans-next aria-label="Next plan group">
-              <span aria-hidden="true">&#8250;</span>
-            </button>
-          </div>
-          <p class="billing-plans-carousel__caption" data-plans-caption aria-live="polite">Studio &amp; Agency</p>
           <div class="billing-plans-carousel__viewport">
             <div class="billing-plans-carousel__track" data-plans-track>
               <div class="billing-plans-carousel__slide" id="plan-slide-0" role="tabpanel" aria-labelledby="plan-tab-0" data-plan-index="0" aria-hidden="false">
@@ -741,6 +722,11 @@
               </div>
             </div>
           </div>
+          <div class="billing-plans-carousel__dots" role="tablist" aria-label="Choose a plan group">
+            <button type="button" class="billing-plans-carousel__dot" data-plan-dot="0" role="tab" aria-selected="true" aria-label="Studio and Agency plans" aria-controls="plan-slide-0" id="plan-tab-0"></button>
+            <button type="button" class="billing-plans-carousel__dot" data-plan-dot="1" role="tab" aria-selected="false" aria-label="Solo plan" aria-controls="plan-slide-1" id="plan-tab-1"></button>
+          </div>
+          <p class="billing-plans-carousel__sr-caption sr-only" data-plans-caption aria-live="polite">Studio &amp; Agency</p>
         </div>
       </div>
     </section>
@@ -758,26 +744,28 @@
                 <thead>
                   <tr>
                     <th style="min-width: 200px">Capability</th>
+                    <th style="min-width: 110px">Solo</th>
                     <th style="min-width: 130px">Studio</th>
                     <th style="min-width: 130px">Agency</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Free trial</td><td>30 days</td><td>30 days</td></tr>
-                  <tr><td>Seats (logins)</td><td>5</td><td>15</td></tr>
-                  <tr><td>Active clients</td><td>250</td><td>Unlimited</td></tr>
-                  <tr><td>Invoices / calendar month</td><td>500</td><td>Unlimited</td></tr>
-                  <tr><td>Time tracking (timer, manual entry, edit history)</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Time reports and estimated value (rates)</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Admin: org-wide and comparative time analytics</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Recurring invoices</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Client portal &amp; PDF download</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Branded PDFs &amp; org logo</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Email automation cap / month</td><td>200 sends</td><td>1,000 sends</td></tr>
-                  <tr><td>Reports &amp; charts in app</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>Report PDF export</td><td>Yes</td><td>Yes</td></tr>
-                  <tr><td>CSV exports</td><td>Standard</td><td>Full history</td></tr>
-                  <tr><td>Audit log</td><td>12 months</td><td>24 months</td></tr>
+                  <tr><td>Free trial</td><td>30 days</td><td>30 days</td><td>30 days</td></tr>
+                  <tr><td>Seats (logins)</td><td>1</td><td>5</td><td>15</td></tr>
+                  <tr><td>Active clients</td><td>50</td><td>250</td><td>Unlimited</td></tr>
+                  <tr><td>Invoices / calendar month</td><td>100</td><td>500</td><td>Unlimited</td></tr>
+                  <tr><td>Manual payment recording</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Time tracking (timer, manual entry, edit history)</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Time reports and estimated value (rates)</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Admin: org-wide and comparative time analytics</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Recurring invoices</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Client portal &amp; PDF download</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Branded PDFs &amp; org logo</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Email automation cap / month</td><td>&mdash;</td><td>200 sends</td><td>1,000 sends</td></tr>
+                  <tr><td>Reports &amp; charts in app</td><td>Core</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>Report PDF export</td><td>Invoice PDFs</td><td>Yes</td><td>Yes</td></tr>
+                  <tr><td>CSV exports</td><td>Solo set</td><td>Standard</td><td>Full history</td></tr>
+                  <tr><td>Audit log</td><td>6 months</td><td>12 months</td><td>24 months</td></tr>
                 </tbody>
               </table>
             </div>
