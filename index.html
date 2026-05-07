@@ -590,6 +590,25 @@
         <p class="billing-cycle-note billing-cycle-note--annual">Annual plans are billed upfront and skip the 30-day free trial.</p>
 
         <div class="billing-plans-carousel" data-plans-carousel role="region" aria-roledescription="carousel" aria-label="Plan groups">
+          <div class="billing-plans-carousel__controls">
+            <button type="button" class="billing-plans-carousel__arrow" data-plans-prev aria-label="Previous plan group">
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <div class="billing-plans-carousel__dots" role="tablist" aria-label="Choose a plan group">
+              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="true" data-plan-dot="0" aria-controls="plan-slide-0" id="plan-tab-0">
+                <span class="billing-plans-carousel__dot-bullet" aria-hidden="true"></span>
+                <span class="billing-plans-carousel__dot-label">Studio &amp; Agency</span>
+              </button>
+              <button type="button" class="billing-plans-carousel__dot-btn" role="tab" aria-selected="false" data-plan-dot="1" aria-controls="plan-slide-1" id="plan-tab-1">
+                <span class="billing-plans-carousel__dot-bullet" aria-hidden="true"></span>
+                <span class="billing-plans-carousel__dot-label">Solo</span>
+              </button>
+            </div>
+            <button type="button" class="billing-plans-carousel__arrow" data-plans-next aria-label="Next plan group">
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
+          <p class="billing-plans-carousel__caption" data-plans-caption aria-live="polite">Studio &amp; Agency</p>
           <div class="billing-plans-carousel__viewport">
             <div class="billing-plans-carousel__track" data-plans-track>
               <div class="billing-plans-carousel__slide" id="plan-slide-0" role="tabpanel" aria-labelledby="plan-tab-0" data-plan-index="0" aria-hidden="false">
@@ -722,11 +741,6 @@
               </div>
             </div>
           </div>
-          <div class="billing-plans-carousel__dots" role="tablist" aria-label="Choose a plan group">
-            <button type="button" class="billing-plans-carousel__dot" data-plan-dot="0" role="tab" aria-selected="true" aria-label="Studio and Agency plans" aria-controls="plan-slide-0" id="plan-tab-0"></button>
-            <button type="button" class="billing-plans-carousel__dot" data-plan-dot="1" role="tab" aria-selected="false" aria-label="Solo plan" aria-controls="plan-slide-1" id="plan-tab-1"></button>
-          </div>
-          <p class="billing-plans-carousel__sr-caption sr-only" data-plans-caption aria-live="polite">Studio &amp; Agency</p>
         </div>
       </div>
     </section>

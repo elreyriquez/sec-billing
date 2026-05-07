@@ -4,6 +4,8 @@
 
   var track = root.querySelector("[data-plans-track]");
   var slides = root.querySelectorAll(".billing-plans-carousel__slide");
+  var prevBtn = root.querySelector("[data-plans-prev]");
+  var nextBtn = root.querySelector("[data-plans-next]");
   var dots = root.querySelectorAll("[data-plan-dot]");
   var caption = root.querySelector("[data-plans-caption]");
 
@@ -27,6 +29,9 @@
     }
     if (caption && titles[index]) caption.textContent = titles[index];
   }
+
+  if (prevBtn) prevBtn.addEventListener("click", function () { go(index - 1); });
+  if (nextBtn) nextBtn.addEventListener("click", function () { go(index + 1); });
 
   function focusActiveDot() {
     var t = root.querySelectorAll("[data-plan-dot]")[index];
