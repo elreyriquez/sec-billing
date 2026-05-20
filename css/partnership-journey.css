@@ -170,31 +170,52 @@
   background: var(--accent);
 }
 
-.partnership-tier-table {
-  width: 100%;
-  max-width: 28rem;
-  border-collapse: collapse;
+.partnership-rate-highlight {
   margin-top: 1.25rem;
-  font-size: 0.9rem;
-}
-
-.partnership-tier-table th,
-.partnership-tier-table td {
-  border: 1px solid var(--border-strong);
-  padding: 0.65rem 0.85rem;
-  text-align: left;
-}
-
-.partnership-tier-table th {
+  padding: 1.25rem 1.35rem;
+  max-width: 28rem;
   background: var(--regal);
   color: #fff;
-  font-family: var(--font-head);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  border-radius: var(--radius-panel);
 }
 
-.partnership-tier-table tbody tr:nth-child(even) {
-  background: var(--surface-muted);
+.partnership-rate-highlight__percent {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1;
+  margin: 0 0 0.35rem;
+}
+
+.partnership-rate-highlight__label {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
+
+.partnership-rate-highlight__note {
+  margin: 0.85rem 0 0;
+  font-size: 0.8125rem;
+  opacity: 0.88;
+  line-height: 1.45;
+}
+
+/* Dark buttons on light sections (ghost header styles clash here) */
+.page-partnership main .partnership-btn-dark,
+.page-partnership .partnership-agreement-panel .partnership-btn-dark {
+  background: var(--counts-black);
+  color: #fff !important;
+  border: 1px solid var(--counts-black);
+}
+
+.page-partnership main .partnership-btn-dark:hover:not(:disabled),
+.page-partnership .partnership-agreement-panel .partnership-btn-dark:hover:not(:disabled) {
+  background: var(--regal);
+  border-color: var(--regal);
+  color: #fff !important;
+}
+
+.page-partnership .sec-billing-footer__logo-mark img {
+  filter: brightness(0);
 }
 
 .partnership-agreement-panel {
@@ -322,6 +343,14 @@
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.page-partnership .sec-billing-footer__cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
 /* scroll reveal (minimal port) */
