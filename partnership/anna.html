@@ -26,7 +26,7 @@
         <a href="#explore">Explore</a>
         <a href="#strategy">Strategy</a>
         <a href="#structure">Deal</a>
-        <a href="#agreement">Sign</a>
+        <a href="#agreement">Agreement</a>
       </nav>
 
       <div class="sec-billing-header__cta" id="sec-billing-header-cta">
@@ -195,23 +195,29 @@
     <section class="partnership-step" id="agreement" aria-labelledby="agreement-heading">
       <div class="partnership-step__inner">
         <p class="partnership-step__label scroll-reveal">Step 5</p>
-        <h2 class="partnership-step__title scroll-reveal" id="agreement-heading">Sign the partnership acknowledgment</h2>
+        <h2 class="partnership-step__title scroll-reveal" id="agreement-heading">Review and sign the agreement</h2>
         <p class="partnership-step__copy scroll-reveal">
-          Signing below records your agreement to the terms summarized on this page (<code>anna-v1-2026-05</code>).
-          A formal written contract and your referral setup will follow. Questions? Email
+          Below is the full founding partner agreement (<code>anna-v1-2026-05</code>). Please read it carefully. This
+          draft is intended for review by counsel for both parties before or after signing. Questions? Email
           <a href="mailto:1secfreelance@gmail.com">1secfreelance@gmail.com</a> or call
           <a href="tel:+18763313386">+1 (876) 331-3386</a>.
         </p>
 
+        <div class="partnership-legal-wrap scroll-reveal" id="partnership-legal-wrap">
+          <p class="partnership-legal-wrap__loading" id="partnership-legal-loading">Loading agreement…</p>
+          <p class="partnership-legal-wrap__error" id="partnership-legal-error" hidden></p>
+          <div class="partnership-legal-scroll" id="partnership-legal-document" hidden></div>
+        </div>
+
         <div class="partnership-agreement-panel scroll-reveal" id="partnership-sign-panel">
           <p class="partnership-agreement-summary">
-            By signing, you acknowledge the 12-month partnership starting at <strong>20% net revenue share</strong>,
-            with room to negotiate a higher rate, and that this page is an acknowledgment pending the full legal
-            contract.
+            By signing below, you agree to the <strong>SEC Billing Founding Partner Agreement</strong> shown above,
+            including <strong>20% net revenue share</strong> for the initial 12-month term, with room to negotiate a
+            higher rate as described in the agreement.
           </p>
 
           <div class="partnership-form__success" id="partnership-sign-success" hidden>
-            <p><strong>Thank you, Anna.</strong> Your agreement was received. You should get a confirmation email shortly. The SEC team will follow up with referral tracking and the formal contract.</p>
+            <p><strong>Thank you, Anna.</strong> Your signed agreement was received and saved securely. You should get a confirmation email shortly, and the SEC team receives a full copy with your signature for our records. We will follow up with your referral code and next steps.</p>
             <p class="text-muted" id="partnership-sign-success-meta"></p>
           </div>
 
@@ -233,15 +239,15 @@
             <div class="partnership-form__checks">
               <label class="partnership-form__check">
                 <input type="checkbox" name="readTerms" required />
-                <span>I have read the partnership terms on this page.</span>
+                <span>I have read the founding partner agreement above in full.</span>
               </label>
               <label class="partnership-form__check">
                 <input type="checkbox" name="authorityToSign" required />
-                <span>I have authority to enter this partnership acknowledgment on my own behalf.</span>
+                <span>I have authority to sign this agreement on my own behalf.</span>
               </label>
               <label class="partnership-form__check">
                 <input type="checkbox" name="agreeRevenueShare" required />
-                <span>I agree to the net revenue share starting at 20% (12-month initial term) as presented, with negotiation as described.</span>
+                <span>I agree to the founding partner agreement, including 20% net revenue share for the 12-month initial term, as presented above.</span>
               </label>
             </div>
 
@@ -326,6 +332,7 @@
   </script>
   <script src="../js/nav.js"></script>
   <script src="../js/partnership-journey.js"></script>
+  <script src="../js/partnership-agreement-load.js"></script>
   <script src="../js/partnership-sign.js"></script>
 </body>
 </html>

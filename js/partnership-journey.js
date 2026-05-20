@@ -63,5 +63,6 @@
     if (el) sectionObserver.observe(el);
   });
 
+  window.partnershipObserveReveals = observeReveals;
   observeReveals();
 })();
