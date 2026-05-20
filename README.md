@@ -16,6 +16,14 @@ Static **pricing & features** site for [SEC Billing](https://github.com/elreyriq
 
 The billing app and [sec-services `software.html`](https://elreyriquez.github.io/sec-services/software.html) link to this site for plans and sign-up.
 
+## Partnership journey (private)
+
+**Anna the Money Coach:** `partnership/anna.html` → after deploy:
+
+`https://billingdetails.secfreelance.com/partnership/anna.html`
+
+Signing posts to the live billing app (`BILLING_APP_BASE` + `/api/partnership/sign`). Deploy the billing app migration `20260520140000_partnership_agreements` before sharing the link.
+
 ## Local preview
 
 From this directory:
