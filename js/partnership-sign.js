@@ -4,7 +4,7 @@
 (function () {
   var body = document.body;
   var partnerSlug = body.getAttribute("data-partner-slug") || "anna";
-  var agreementVersion = body.getAttribute("data-agreement-version") || "anna-v1-2026-05";
+  var agreementVersion = body.getAttribute("data-agreement-version") || "anna-v1-2026-06";
 
   var form = document.getElementById("partnership-sign-form");
   var panel = document.getElementById("partnership-sign-panel");
