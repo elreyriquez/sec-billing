@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the waitlist · SEC Billing</title>
+  <meta name="description" content="SEC Billing is coming soon. Join the waitlist to hear when invoicing, collections, and time tracking for agencies and firms launches." />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/billing-pricing.css" />
+  <link rel="stylesheet" href="css/marketing.css" />
+  <link rel="stylesheet" href="css/waitlist.css" />
+</head>
+<body class="page-waitlist">
+  <header class="sec-billing-header" id="sec-billing-header">
+    <div class="sec-billing-header__inner">
+      <a href="index.html" class="sec-billing-brand" aria-label="SEC Billing home">
+        <span class="sec-billing-brand__mark" aria-hidden="true">
+          <img src="assets/logo/SECLogo.png" alt="" decoding="async" width="120" height="48" />
+        </span>
+        <span class="sec-billing-brand__title">Billing</span>
+      </a>
+
+      <nav class="sec-billing-nav" aria-label="Page sections">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#ui-previews">Preview</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#specifications">Specifications</a>
+      </nav>
+
+      <div class="sec-billing-header__cta" id="sec-billing-header-cta">
+        <a class="sec-billing-btn sec-billing-btn--ghost" data-billing-path="/login" href="#">Sign in</a>
+        <a class="sec-billing-btn sec-billing-btn--primary" data-billing-path="/register" href="#">Get started</a>
+      </div>
+
+      <button
+        type="button"
+        class="sec-billing-menu-toggle"
+        aria-expanded="false"
+        aria-controls="sec-billing-header-cta"
+        aria-label="Open menu"
+      >
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="waitlist-hero" id="waitlist" aria-labelledby="waitlist-heading">
+      <div class="waitlist-hero__inner">
+        <div class="waitlist-hero__copy">
+          <p class="marketing-section-label waitlist-hero__eyebrow">Coming soon</p>
+          <h1 class="marketing-intro__headline" id="waitlist-heading">
+            <span class="marketing-intro__headline-line marketing-intro__headline-line--primary">SEC Billing is on the way</span>
+            <span class="marketing-intro__headline-line marketing-intro__headline-line--secondary">Join the waitlist</span>
+          </h1>
+          <p class="marketing-intro__lede">
+            We are putting the finishing touches on SEC Billing: invoicing, collections, time tracking, and client-ready PDFs in one workspace for agencies and firms. Add your details and we will let you know as soon as it launches.
+          </p>
+          <ul class="waitlist-points" aria-label="What SEC Billing will include">
+            <li>Customizable invoices and branded PDFs</li>
+            <li>Client invoice portals via secure links</li>
+            <li>Time tracking and recurring invoices</li>
+            <li>Reports and CSV exports for your accountant</li>
+          </ul>
+          <p class="waitlist-hero__fine">
+            Joining the waitlist is free and does not sign you up for a plan. We will only use your details to contact you about the SEC Billing launch.
+          </p>
+        </div>
+
+        <div class="waitlist-card" id="waitlist-panel">
+          <!--
+            ============================================================
+            WAITLIST FORM (DRAFT) — SUBMISSIONS ARE NOT CONNECTED YET
+            Set WAITLIST_ENDPOINT in js/config.js before launch.
+            While it is empty, js/waitlist.js shows a "not connected"
+            notice and logs to the console; it never fakes success.
+            ============================================================
+          -->
+          <div class="waitlist-card__head">
+            <h2 class="waitlist-card__title">Get launch updates</h2>
+            <p class="waitlist-card__sub">Fields marked <span class="waitlist-req" aria-hidden="true">*</span><span class="waitlist-sr">with an asterisk</span> are required.</p>
+          </div>
+
+          <form class="waitlist-form" id="waitlist-form" novalidate data-waitlist-form>
+            <div class="waitlist-field">
+              <label for="wl-name">Name <span class="waitlist-req" aria-hidden="true">*</span></label>
+              <input type="text" id="wl-name" name="name" autocomplete="name" required maxlength="120" aria-describedby="wl-name-error" />
+              <p class="waitlist-field__error" id="wl-name-error" hidden></p>
+            </div>
+
+            <div class="waitlist-field">
+              <label for="wl-email">Email <span class="waitlist-req" aria-hidden="true">*</span></label>
+              <input type="email" id="wl-email" name="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="wl-email-error" />
+              <p class="waitlist-field__error" id="wl-email-error" hidden></p>
+            </div>
+
+            <div class="waitlist-row">
+              <div class="waitlist-field">
+                <label for="wl-business">Business type <span class="waitlist-req" aria-hidden="true">*</span></label>
+                <select id="wl-business" name="businessType" required aria-describedby="wl-business-error">
+                  <option value="" selected disabled>Select one</option>
+                  <option value="agency">Agency</option>
+                  <option value="law_firm">Law firm</option>
+                  <option value="other">Other</option>
+                </select>
+                <p class="waitlist-field__error" id="wl-business-error" hidden></p>
+              </div>
+
+              <div class="waitlist-field">
+                <label for="wl-team">Team size <span class="waitlist-req" aria-hidden="true">*</span></label>
+                <select id="wl-team" name="teamSize" required aria-describedby="wl-team-error">
+                  <option value="" selected disabled>Select one</option>
+                  <option value="1">Just me</option>
+                  <option value="2-5">2&ndash;5</option>
+                  <option value="6-15">6&ndash;15</option>
+                  <option value="16-50">16&ndash;50</option>
+                  <option value="50+">50+</option>
+                </select>
+                <p class="waitlist-field__error" id="wl-team-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="waitlist-field">
+              <label for="wl-notes">Anything you would like us to know? <span class="waitlist-optional">(optional)</span></label>
+              <textarea id="wl-notes" name="notes" rows="4" maxlength="2000" aria-describedby="wl-notes-hint"></textarea>
+              <p class="waitlist-field__hint" id="wl-notes-hint">For example, the tools you use today or what you need most from billing software.</p>
+            </div>
+
+            <!-- Honeypot: hidden from people, bots tend to fill it. Mirrors the partnership form's "website" field. -->
+            <div class="waitlist-hp" aria-hidden="true">
+              <label for="wl-website">Website</label>
+              <input type="text" id="wl-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="waitlist-field waitlist-field--check">
+              <label class="waitlist-check" for="wl-optin">
+                <input type="checkbox" id="wl-optin" name="launchEmailsOptIn" value="yes" required aria-describedby="wl-optin-hint wl-optin-error" />
+                <span>Email me when SEC Billing launches <span class="waitlist-req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="waitlist-field__hint" id="wl-optin-hint">Required to join the waitlist, since launch emails are how we will reach you. You can unsubscribe at any time.</p>
+              <p class="waitlist-field__error" id="wl-optin-error" hidden></p>
+            </div>
+
+            <div class="waitlist-status" id="waitlist-status" role="alert" hidden></div>
+
+            <button type="submit" class="billing-plan-cta billing-plan-cta--accent waitlist-submit" id="waitlist-submit">Join the waitlist</button>
+          </form>
+
+          <div class="waitlist-success" id="waitlist-success" role="status" tabindex="-1" hidden>
+            <h2 class="waitlist-card__title">Thanks, you are on the list</h2>
+            <p>We will email you when SEC Billing launches. Keep an eye on your inbox (and your spam folder, just in case).</p>
+            <p><a href="index.html">Back to SEC Billing</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sec-billing-site-footer">
+    <div class="sec-billing-footer__surface">
+      <div class="pricing-page-inner sec-billing-footer__grid">
+        <div class="sec-billing-footer__brand">
+          <a href="index.html" class="sec-billing-footer__logo-lockup" aria-label="SEC Billing home">
+            <span class="sec-billing-footer__logo-mark">
+              <img src="assets/logo/SECLogo.png" alt="" width="120" height="48" decoding="async" />
+            </span>
+            <span class="sec-billing-footer__logo-word">Billing</span>
+          </a>
+          <p class="sec-billing-footer__tagline">
+            Invoicing, collections, time tracking, and client-ready reporting in one workspace—built for agencies and firms who want to get paid without full accounting complexity on day one.
+          </p>
+          <p class="sec-billing-footer__credit">
+            A product by <span class="sec-billing-footer__credit-name">SECMINSHOURS</span> Software Development.
+          </p>
+          <p class="sec-billing-footer__copyright">&copy; 2026 SEC. All rights reserved.</p>
+        </div>
+
+        <nav class="sec-billing-footer__cols" aria-label="Footer">
+          <div class="sec-billing-footer__col">
+            <p class="sec-billing-footer__col-head">Product</p>
+            <ul class="sec-billing-footer__links">
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#ui-previews">User Interface Demo</a></li>
+              <li><a href="index.html#specifications">Specifications</a></li>
+              <li><a data-billing-path="/register" href="#">Get started</a></li>
+            </ul>
+          </div>
+          <div class="sec-billing-footer__col">
+            <p class="sec-billing-footer__col-head">Company</p>
+            <ul class="sec-billing-footer__links">
+              <li>
+                <a href="https://elreyriquez.github.io/sec-services/" target="_blank" rel="noopener noreferrer">SEC services</a>
+              </li>
+              <li>
+                <a href="https://elreyriquez.github.io/sec-services/software.html" target="_blank" rel="noopener noreferrer">Software catalog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sec-billing-footer__col">
+            <p class="sec-billing-footer__col-head">Contact</p>
+            <ul class="sec-billing-footer__links">
+              <li>
+                <a href="tel:+18763313386" aria-label="Call SEC at +1 876 331 3386">
+                  +1 (876) 331-3386
+                </a>
+              </li>
+              <li>
+                <a href="mailto:1secfreelance@gmail.com" aria-label="Email SEC at 1secfreelance@gmail.com">
+                  1secfreelance@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sec-billing-footer__col">
+            <p class="sec-billing-footer__col-head">Legal</p>
+            <ul class="sec-billing-footer__links">
+              <li><a data-billing-path="/privacy" href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="sec-billing-footer__accent" aria-hidden="true">
+      <div class="sec-billing-footer__accent-inner">
+        <span class="sec-billing-footer__accent-bar sec-billing-footer__accent-bar--a"></span>
+        <span class="sec-billing-footer__accent-bar sec-billing-footer__accent-bar--b"></span>
+        <span class="sec-billing-footer__accent-bar sec-billing-footer__accent-bar--c"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var cfg = window.SEC_CONFIG || {};
+      var base = String(cfg.BILLING_APP_BASE || "").replace(/\/$/, "");
+      var warn = document.getElementById("billing-app-config-warn");
+      var links = document.querySelectorAll("[data-billing-path]");
+      if (!base) {
+        if (warn) warn.hidden = false;
+        links.forEach(function (a) {
+          a.classList.add("billing-cta-disabled");
+          a.href = "#";
+        });
+        return;
+      }
+      if (warn) warn.hidden = true;
+      links.forEach(function (a) {
+        var p = a.getAttribute("data-billing-path") || "/";
+        a.href = base + (p.charAt(0) === "/" ? p : "/" + p);
+        a.classList.remove("billing-cta-disabled");
+      });
+    });
+  </script>
+  <script src="js/nav.js"></script>
+  <script src="js/waitlist.js"></script>
+</body>
+</html>
