@@ -11,4 +11,9 @@ window.SEC_CONFIG = {
    * Local dev: use http://127.0.0.1:3000 while the Next app runs locally.
    */
   BILLING_APP_BASE: "https://billing.secfreelance.com",
+  /**
+   * Waitlist form (waitlist.html) POSTs JSON here. Empty = not connected:
+   * the page shows a "Sign-ups aren't connected yet" notice instead of success.
+   */
+  WAITLIST_ENDPOINT: "", // TODO: set waitlist endpoint before launch
 };
